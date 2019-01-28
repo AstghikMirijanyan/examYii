@@ -88,3 +88,44 @@ hr.style-seven:before { /* Not really supposed to work, but does */
     border-width: 0 0 1px 0;
     border-radius: 20px;
 }
+.big_blog_image{
+    width: 90%;
+    height: 250px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background: blue;
+}
+.big_blog_image>img{
+    width: 100%;
+    height: 100%;
+    float: left;
+    background-size: cover;
+}
+.title_bl{
+    width: 100%;
+    height: 20%;
+    float: left;
+    margin-bottom: 20px;
+}
+.title_bl>h2{
+    text-align: center;
+    text-transform: lowercase;
+    margin-top: 0;
+
+}
+.one{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+.blog_clock{
+    width: 90%;
+    height: 10%;
+    float: left;
+}
+.des{
+    margin-top: 20px;
+    width: 90%;
+    height: auto;
+    float: left;
+}

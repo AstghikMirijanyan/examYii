@@ -72,10 +72,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $blogs = Blog::find()->where(['status'=>'1'])->asArray()->all();
-        return $this->render('index',[
-            'blogs' => $blogs,
-        ]);
+        return $this->render('index');
     }
 
     /**
