@@ -26,6 +26,7 @@ class User extends ActiveRecord implements IdentityInterface
 {
     const STATUS_DELETED = 0;
     const STATUS_ACTIVE = 10;
+    const IS_ADMIN = 1;
 
 
     /**
@@ -44,7 +45,10 @@ class User extends ActiveRecord implements IdentityInterface
         return [
             TimestampBehavior::className(),
         ];
+
+
     }
+
 
     /**
      * {@inheritdoc}
@@ -63,7 +67,11 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public static function findIdentity($id)
     {
-        return static::findOne(['id' => $id, 'status' => self::STATUS_ACTIVE]);
+        if (Yii::$app->user->isGuest) {
+        throw new NotFoundHttpException();
+    }
+
+        return static::findOne(['id' => $id, 'is_admin' => self::IS_ADMIN]);
     }
 
     /**

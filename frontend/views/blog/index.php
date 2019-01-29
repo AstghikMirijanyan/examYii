@@ -20,7 +20,7 @@
             </div>
             <div class="desc_blog">
                 <?= $blog['description']?>
-                <a href="<?= \yii\helpers\Url::to([ $blog['slug']]) ?>">read more</a>
+                <a href="<?= \yii\helpers\Url::to([ $blog['id']]) ?>">read more</a>
             </div>
         </div>
         <div class="blogs">
