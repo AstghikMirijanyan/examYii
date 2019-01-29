@@ -129,3 +129,43 @@ hr.style-seven:before { /* Not really supposed to work, but does */
     height: auto;
     float: left;
 }
+.comment{
+    width: 100%;
+    height: 200px;
+    float: left;
+    margin-bottom: 20px;
+}
+.cmm{
+    width: 30%;
+    height: 200px;
+    float: left;
+}
+.all_comments{
+    width: 60%;
+    height: 200px;
+    float: left;
+    background: #eeeeee;
+
+}
+.comment_image{
+    width: 10%;
+    height: 50px;
+    background: silver;
+    float: left;
+}
+.comment_user{
+    width: 30%;
+    height: 200px;
+    float: left;
+}
+.comment_text{
+    width: 60%;
+    height: 80%;
+    float: left;
+}
+.comment_date{
+    width:60% ;
+    margin-top: 5px;
+    height: 15%;
+    float: left;
+}

@@ -22,7 +22,32 @@ use yii\bootstrap\ActiveForm;
     <div class="des"><?= $blog['description']?></div>
 </div>
 
-<?= var_dump($comments)?>
+
+
+
+<?php foreach ($comments as $comment){
+    ?>
+    <div class="comment">
+        <div class="cmm"></div>
+        <div class="all_comments">
+            <div class="comment_image">
+                <img src="" alt="">
+            </div>
+            <?php foreach ($users as $user){
+?>
+                <div class="comment_user"><?= $user['username']?></div>
+        <?php
+            }?>
+
+            <div class="comment_text"><?= $comment['text']?></div>
+            <div class="comment_date"><?= $comment['date']?></div>
+        </div>
+    </div>
+    <?php
+}?>
+
+
+
 <!--<div class="row">-->
 <!--    <div class="col-lg-5">-->
 <!--        --><?php //$form = ActiveForm::begin(['id' => 'login-form']); ?>
